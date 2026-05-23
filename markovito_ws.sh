@@ -3,12 +3,6 @@
 # Exit on error
 set -e
 
-echo "Starting Setup..."
-
-# 1. Update and install system dependencies
-echo "Updating apt package list..."
-sudo apt update
-
 echo "Installing system dependencies..."
 sudo apt install -y \
     ros-noetic-navigation \
