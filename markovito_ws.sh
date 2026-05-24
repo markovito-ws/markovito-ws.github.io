@@ -30,13 +30,21 @@ clone_repo() {
     fi
 }
 
+# Main
 clone_repo "https://github.com/markovito-ws/bt_markovito" "src/bt_markovito"
+
+# Behavior tree
 clone_repo "https://github.com/markovito-ws/BehaviorTree.CPP" "src/BehaviorTree.CPP"
 clone_repo "https://github.com/markovito-ws/Groot" "src/Groot"
 clone_repo "https://github.com/markovito-ws/BehaviorTree.ROS" "src/BehaviorTree.ROS"
+
+# Modules
 clone_repo "https://github.com/markovito-ws/module_sam" "src/module_sam"
 clone_repo "https://github.com/markovito-ws/module_whisper" "src/module_whisper"
 clone_repo "https://github.com/markovito-ws/module_nav" "src/module_nav"
+clone_repo "https://github.com/markovito-ws/module_tts" "src/module_tts"
+clone_repo "https://github.com/markovito-ws/module_usbcam" "src/module_usbcam"
+
 
 if ! command -v uv >/dev/null 2>&1; then
     echo "Installing uv..."
