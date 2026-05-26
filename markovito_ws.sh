@@ -3,7 +3,7 @@
 # Exit on error
 set -e
 
-echo "Installing system dependencies..."
+echo "Installing dependencies..."
 sudo apt install -y \
     ros-noetic-navigation \
     ros-noetic-slam-toolbox \
@@ -13,7 +13,10 @@ sudo apt install -y \
     libdw-dev \
     libportaudio2 \
     git \
-    curl
+    curl \
+    python3-vcstool
+
+pip3 install sounddevice zros
 
 # 2. Clone repositories using git clone --depth 1
 echo "Cloning repositories..."
